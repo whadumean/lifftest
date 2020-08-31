@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+</head>
+<body>	
+$(window).on('load', function () {
+  liff.init(function (data) {
+ liff.getProfile().then(profile=>{
+      document.getElementById("user-name").innerHTML = profile.displayName;
+      document.getElementById("user-desc").innerHTML = profile.statusMessage;
+      document.getElementById("user-id").innerHTML = profile.userId;
+      $('#user-img').attr('src',profile.pictureUrl);
+
+});
+</body>
+</html>
