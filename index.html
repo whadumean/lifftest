@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge"/>
+	<title>Doucument</title>
+</head>
+<body>
+<p>userID: <span id="userID"></span></p>
+<p>displayname: <span id="displayname"></span></p>
+<p>pictureurl: <span id="pictureurl"></span></p>
+<p>statusmessage: <span id="statusmessage"></span></p>
+</body>
+<script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+<script>
+    liff.init(
+	    data => {
+	        //call liff api
+		    liff.getProfile().then(Profile =>{
+		     document.getElementById("userID").innerHTML =Profile.userID
+			 document.getElementById("displayname").innerHTML =Profile.displayname
+			 document.getElementById("pictureurl").innerHTML =Profile.pictureurl
+			 document.getElementById("statusmessage").innerHTML =Profile.statusmessage
+			 
+		    })
+	   
+	    },
+	   err => {
+	       //liff 
+	   
+	   }
+	)   
+</script>
+</html>
