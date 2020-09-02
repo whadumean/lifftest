@@ -1,4 +1,4 @@
 <?php
-include_once(".html");
+include_once("deply.html");
 
 ?>
