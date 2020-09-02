@@ -1,4 +1,4 @@
 <?php
-include_once("qq.html");
+include_once(".html");
 
 ?>
